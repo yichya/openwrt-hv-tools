@@ -4,7 +4,7 @@ START=21
 
 USE_PROCD=1
 NAME=hv_fcopy_daemon
-PROG=/sbin/hv_fcopy_daemon
+PROG=/usr/sbin/hv_fcopy_daemon
 
 start_service() {
         procd_open_instance
