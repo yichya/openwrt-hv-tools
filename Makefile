@@ -3,7 +3,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=hv-tools
-PKG_VERSION:=0.0.3
+PKG_VERSION:=0.0.4
 PKG_RELEASE:=1
 PKG_LICENSE:=GPL-2.0
 
@@ -14,6 +14,7 @@ define Package/hv-tools
 	SECTION:=Custom
 	CATEGORY:=Extra packages
 	TITLE:=hv-tools
+	DEPENDS:=+uci
 	MAINTAINER:=yichya <mail@yichya.dev>
 endef
 
