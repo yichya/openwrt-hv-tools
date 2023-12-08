@@ -4,7 +4,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=hv-tools
 PKG_VERSION:=0.0.6
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 PKG_LICENSE:=GPL-2.0
 
 include $(INCLUDE_DIR)/package.mk
@@ -23,7 +23,7 @@ define Package/hv-tools/description
 endef
 
 define Build/Compile
-	cd $(LINUX_DIR)/tools/hv; $(MAKE_VARS) $(MAKE) $(MAKE_FLAGS) all
+	$(MAKE_VARS) $(MAKE) $(MAKE_FLAGS) all -C $(LINUX_DIR)/tools/hv
 endef
 
 define Package/hv-tools/install
