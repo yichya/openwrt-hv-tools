@@ -1,2 +1,2 @@
 #!/bin/sh
-cat /etc/resolv.conf 2>/dev/null | awk '/^nameserver/ { print $2 }'
+awk '/^nameserver/ { print $2 }' /var/resolv.conf.d/resolv.conf.auto | sort | uniq
